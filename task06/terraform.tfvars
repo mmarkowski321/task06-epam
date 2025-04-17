@@ -1,4 +1,4 @@
-region                  = "East US"
+region                  = "West US"
 allowed_ip_address      = "18.153.146.156"
 sql_admin_name          = "sqladminuser"
 service_model_database  = "S2"
