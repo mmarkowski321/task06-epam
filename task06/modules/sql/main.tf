@@ -18,7 +18,13 @@ resource "azurerm_mssql_database" "db" {
   server_id = azurerm_mssql_server.sql.id
   sku_name  = var.service_model_database
   tags      = var.tags
+
+  depends_on = [
+    azurerm_mssql_firewall_rule.azure_services,
+    azurerm_mssql_firewall_rule.verification_ip
+  ]
 }
+
 
 resource "azurerm_mssql_firewall_rule" "azure_services" {
   name             = "AllowAzure"
