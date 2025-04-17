@@ -1,5 +1,5 @@
 variable "region" {
-  description = "Azure region where all resources will be deployed (e.g. East US)"
+  description = "Azure region where all resources will be deployed"
   type        = string
 }
 
@@ -14,7 +14,7 @@ variable "sql_admin_name" {
 }
 
 variable "service_model_database" {
-  description = "Service tier (SKU) for the Azure SQL Database, e.g. S2"
+  description = "Service tier for the Azure SQL Database"
   type        = string
 }
 
@@ -24,21 +24,21 @@ variable "firewall_rule_name" {
 }
 
 variable "kv_secret_name_user" {
-  description = "Name of the Key Vault secret where the SQL admin username will be stored"
+  description = "Name of the Key Vault secret where SQL admin username will be stored"
   type        = string
 }
 
 variable "kv_secret_name_password" {
-  description = "Name of the Key Vault secret where the SQL admin password will be stored"
+  description = "Name of the Key Vault secret where SQL admin password will be stored"
   type        = string
 }
 
 variable "dotnet_version" {
-  description = "Version of .NET to use for the Linux Web App (e.g. 8.0)"
+  description = "Version of .NET to use for the Linux Web App"
   type        = string
 }
 
 variable "tags" {
-  description = "Map of tags to apply to all resources (e.g. { Creator = \"your_email@example.com\" })"
+  description = "Map of tags to apply to all resources"
   type        = map(string)
 }
